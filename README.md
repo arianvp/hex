@@ -47,9 +47,51 @@ And you'll be prompted with a login prompt (the user is root and the password is
 
 
 
+
+
 ## Creating snapshots
 
 Okay this stuff can't be this easy right? Why are we using docker? Oh yeah! to download insecure layers of images and combine them into one using their union file system. Well... BTRFS can do that too! 
+
+Lets first create a read-only snapshot of our container
+
+$ sudo btrfs snapshot store/arch-base store/arch-base-snapshot
+
+We can now use this snapshot as a base image for other containers and the filesystem will only store the diffs! pretty nifty huh?
+
+# And move it out of the btrfs filesystem
+
+$ sudo btrfs send store/arch-base-snapshot -f ./arch-base-img
+
+We can now share this snapshot with others.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
