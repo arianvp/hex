@@ -47,6 +47,9 @@ And you'll be prompted with a login prompt (the user is root and the password is
 
 
 
+## Creating snapshots
+
+Okay this stuff can't be this easy right? Why are we using docker? Oh yeah! to download insecure layers of images and combine them into one using their union file system. Well... BTRFS can do that too! 
 
 
 
