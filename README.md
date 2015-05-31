@@ -70,9 +70,9 @@ $ sudo btrfs send store/arch-base-snapshot -f ./arch-base-img
 We can now share this snapshot with others.
 
 
+...  Coming soon:
 
-
-
+* Layered snapshots -  How to send diffs of base images to reduce bandwidth when sharing containers
 
 
 
